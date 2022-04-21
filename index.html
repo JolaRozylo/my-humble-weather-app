@@ -26,97 +26,110 @@
   </head>
   <body>
     <div class="container">
-      <header>What's the weather like in</header>
-      <div class="row">
-        <div class="col-8">
-          <form id="search-city">
-            <input
-              type="text"
-              placeholder=""
-              autocomplete="off"
-              id="search-input"
-            />
-          </form>
-        </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-go">
-            <i class="fas fa-search icons"></i>
-          </button>
-        </div>
-        <div class="col-2">
-          <button type="button" id="btn-mylocation">
-            <i class="fas fa-search-location icons"></i>
-          </button>
+      <div class="app-container">
+        <div class="wrapper">
+          <header>What's the weather like in</header>
+          <div class="row">
+            <div class="col-8">
+              <form id="search-city">
+                <input
+                  type="text"
+                  placeholder=""
+                  autocomplete="off"
+                  id="search-input"
+                />
+              </form>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-go">
+                <i class="fas fa-search icons"></i>
+              </button>
+            </div>
+            <div class="col-2">
+              <button type="button" id="btn-mylocation">
+                <i class="fas fa-search-location icons"></i>
+              </button>
+            </div>
+          </div>
+          <br />
+          <div class="result">
+            <h2 id="city-name">London</h2>
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="images/3741356_sun_sunny_weather_icon.svg"
+                  alt="weather"
+                  width="80px"
+                />
+              </div>
+              <div class="col-4">
+                <h1>14°C</h1>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li id="current-day-and-time">Tuesday 16:00</li>
+                  <li id="description">Sunny</li>
+                  <li id="wind">Wind: 30km/h</li>
+                  <li>AQI: Good</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row days">
+            <div class="col-2">
+              <span>Wed</span><br /><img
+                src="images/3741357_cloud_cloudy_partly cloudy_weather_icon.svg"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>
+            <div class="col-2">
+              <span>Thu</span><br /><img
+                src="images/3741359_cloud_overcast_weather_icon.svg"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>
+            <div class="col-2">
+              <span>Fri</span><br /><img
+                src="images/3741360_lightning_thunder_weather_icon.svg"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>
+            <div class="col-2">
+              <span>Sat</span><br /><img
+                src="images/3741362_weather_cold_light snow_snow_icon.svg"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>
+            <div class="col-2">
+              <span>Sun</span><br /><img
+                src="images/3741359_cloud_overcast_weather_icon.svg"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>
+            <div class="col-2">
+              <span>Mon</span><br /><img
+                src="images/3741356_sun_sunny_weather_icon.svg"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>
+          </div>
         </div>
       </div>
-      <br />
-      <div class="result">
-        <h2 id="city-name">London</h2>
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="images/3741356_sun_sunny_weather_icon.svg"
-              alt="weather"
-              width="80px"
-            />
-          </div>
-          <div class="col-4">
-            <h1>14°C</h1>
-          </div>
-          <div class="col-4">
-            <ul>
-              <li id="current-day-and-time">Tuesday 16:00</li>
-              <li id="description">Sunny</li>
-              <li id="wind">Wind: 30km/h</li>
-              <li>AQI: Good</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row days">
-        <div class="col-2">
-          <span>Wed</span><br /><img
-            src="images/3741357_cloud_cloudy_partly cloudy_weather_icon.svg"
-            alt=""
-            width="50px"
-          /><br /><span>14°C</span>
-        </div>
-        <div class="col-2">
-          <span>Thu</span><br /><img
-            src="images/3741359_cloud_overcast_weather_icon.svg"
-            alt=""
-            width="50px"
-          /><br /><span>14°C</span>
-        </div>
-        <div class="col-2">
-          <span>Fri</span><br /><img
-            src="images/3741360_lightning_thunder_weather_icon.svg"
-            alt=""
-            width="50px"
-          /><br /><span>14°C</span>
-        </div>
-        <div class="col-2">
-          <span>Sat</span><br /><img
-            src="images/3741362_weather_cold_light snow_snow_icon.svg"
-            alt=""
-            width="50px"
-          /><br /><span>14°C</span>
-        </div>
-        <div class="col-2">
-          <span>Sun</span><br /><img
-            src="images/3741359_cloud_overcast_weather_icon.svg"
-            alt=""
-            width="50px"
-          /><br /><span>14°C</span>
-        </div>
-        <div class="col-2">
-          <span>Mon</span><br /><img
-            src="images/3741356_sun_sunny_weather_icon.svg"
-            alt=""
-            width="50px"
-          /><br /><span>14°C</span>
-        </div>
-      </div>
+      <footer>
+        <small>
+          <a
+            href="https://github.com/JolaRozylo/my-humble-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >by Jola Rozylo</small
+        >
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>

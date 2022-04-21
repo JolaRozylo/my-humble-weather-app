@@ -1,15 +1,5 @@
 body {
-  display: block;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 60px;
-  margin-left: 60px;
-  padding: 20px;
-  max-width: 620px;
-  border: solid #eeeff1;
-  border-width: 2px;
-  box-shadow: 10px 5px 5px #eeeff1;
-  color: #5a6275;
+  font-family: "Courier New", Courier, monospace;
 }
 header {
   text-align: left;
@@ -51,6 +41,9 @@ ul {
   color: #5a6275;
 }
 
+footer {
+  padding-left: 80px;
+}
 .days {
   padding: 20px;
 }
@@ -62,4 +55,18 @@ ul {
 }
 .left {
   padding: 30px;
+}
+
+.app-container {
+  display: block;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 60px;
+  margin-left: 60px;
+  padding: 20px;
+  max-width: 620px;
+  border: solid #eeeff1;
+  border-width: 2px;
+  box-shadow: 10px 5px 5px #eeeff1;
+  color: #5a6275;
 }
