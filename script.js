@@ -21,7 +21,7 @@ showCurrentTime();
 function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${temperature}°C`;
+  h1.innerHTML = temperature;
   let liDescription = document.querySelector("#description");
   liDescription.innerHTML = response.data.weather[0].main;
   let wind = document.querySelector("#wind");
