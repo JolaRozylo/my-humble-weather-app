@@ -23,11 +23,15 @@ function showWeather(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = temperature;
   let liDescription = document.querySelector("#description");
-  liDescription.innerHTML = response.data.weather[0].main;
+  liDescription.innerHTML = response.data.weather[0].description;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
+  wind.innerHTML = Math.round(response.data.wind.speed);
   let place = document.querySelector("#city-name");
   place.innerHTML = response.data.name;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.main.humidity;
+  let date = document.querySelector("#day-and-time");
+  date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function getWeather(event) {
