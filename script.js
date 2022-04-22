@@ -1,6 +1,14 @@
 function showCurrentTime() {
   let now = new Date();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[now.getDay()];
 
   let hours = now.getHours();
@@ -12,7 +20,7 @@ function showCurrentTime() {
     minutes = `0${minutes}`;
   }
 
-  let liDayAndTime = document.querySelector("li#current-day-and-time");
+  let liDayAndTime = document.querySelector("li#day-and-time");
   liDayAndTime.innerHTML = `${day} ${hours}:${minutes}`;
 }
 
