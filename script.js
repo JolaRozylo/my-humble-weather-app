@@ -39,7 +39,6 @@ function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
   let date = document.querySelector("#day-and-time");
-  date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function getWeather(event) {
@@ -48,7 +47,6 @@ function getWeather(event) {
   let city = document.querySelector("#search-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
-  console.log(apiUrl);
 }
 
 let form = document.querySelector("#search-city");
@@ -70,3 +68,8 @@ function getWeatherInCurrentLocation(event) {
 
 let myLocationBtn = document.querySelector("#btn-mylocation");
 myLocationBtn.addEventListener("click", getWeatherInCurrentLocation);
+
+let searchButton = document.querySelector("#btn-search");
+searchButton.addEventListener("click", getWeather);
+
+console.log(day);
