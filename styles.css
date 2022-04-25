@@ -5,7 +5,7 @@ header {
   text-align: left;
   font-size: 12px;
   color: #bec2ca;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 input {
@@ -41,7 +41,30 @@ ul {
 }
 
 footer {
-  padding-left: 80px;
+  padding-left: 70px;
+  padding-top: 20px;
+}
+form {
+  border: solid #eeeff1;
+  border-color: rgb(238, 239, 241);
+  border-style: solid;
+  border-width: 2px;
+  padding-bottom: 8px;
+  box-shadow: 10px 5px 5px #eeeff1;
+}
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  border: solid #eeeff1;
+  border-color: rgb(238, 239, 241);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0%;
+  box-shadow: 10px 5px 5px #eeeff1;
+  background-color: white;
 }
 .days {
   padding: 20px;
@@ -78,4 +101,14 @@ footer {
 
 #description {
   text-transform: capitalize;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
 }
