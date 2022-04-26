@@ -84,8 +84,8 @@ function defaultSearch(city) {
 
 function convertBackToCelsius(event) {
   event.preventDefault();
-  let temperature = document.querySelecto("h1");
-  temperature.innerHTML = celsiusTemp;
+  let temperature = document.querySelector("h1");
+  temperature.innerHTML = Math.round(celsiusTemp);
 }
 let celsiusTemp = null;
 
