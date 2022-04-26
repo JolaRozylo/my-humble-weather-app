@@ -82,6 +82,11 @@ function defaultSearch(city) {
   axios.get(apiUrl).then(showWeather);
 }
 
+function convertBackToCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelecto("h1");
+  temperature.innerHTML = celsiusTemp;
+}
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-city");
@@ -93,7 +98,10 @@ myLocationBtn.addEventListener("click", getWeatherInCurrentLocation);
 let searchButton = document.querySelector("#btn-search");
 searchButton.addEventListener("click", getWeather);
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertToFahrenhite);
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", convertToFahrenhite);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertBackToCelsius);
 
 defaultSearch("London");
