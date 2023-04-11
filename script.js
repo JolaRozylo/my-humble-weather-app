@@ -1,14 +1,6 @@
 function showCurrentTime() {
   let now = new Date();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[now.getDay()];
 
   let hours = now.getHours();
@@ -39,10 +31,7 @@ function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
   let icon = document.querySelector("#icon");
-  icon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   icon.setAttribute("alt", response.data.weather[0].description);
   celsiusTemp = response.data.main.temp;
 }
@@ -87,6 +76,27 @@ function convertBackToCelsius(event) {
   let temperature = document.querySelector("h1");
   temperature.innerHTML = Math.round(celsiusTemp);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <span>${day}</span><br /><img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="50px"
+              /><br /><span>14°C</span>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-city");
@@ -105,3 +115,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertBackToCelsius);
 
 defaultSearch("London");
+displayForecast();
